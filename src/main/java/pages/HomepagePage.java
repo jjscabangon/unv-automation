@@ -67,4 +67,24 @@ public class HomepagePage extends BasePage {
         }
         System.out.println("END: isTextMessageDisplayed()");
     }
+
+    public static boolean isNewAnnouncementInserted() {
+        System.out.println("START: isNewAnnouncementInserted()");
+        driver.findElement(btnHomeAnnouncementNew).click();
+        waitForPageToLoadCompletely(30);
+        String currentDateAndTime = getDateAndTime();
+        //Input Announcement Data
+            //Title
+            driver.findElement(txtAnnouncementTitle).clear();
+            driver.findElement(txtAnnouncementTitle).sendKeys("Title Regression Test " + currentDateAndTime);
+            //Subtitle
+            driver.findElement(txtAnnouncementSubTitle).clear();
+            driver.findElement(txtAnnouncementSubTitle).sendKeys("Subtitle Regression Test " + currentDateAndTime);
+            //Message
+            driver.findElement(txtAnnouncementMessage).clear();
+            driver.findElement(txtAnnouncementMessage).sendKeys("Message Regression Test " + currentDateAndTime);
+            //Click the Save button
+            driver.findElement(btnAnnouncementSave).click();
+        return false;
+    }
 }

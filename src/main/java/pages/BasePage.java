@@ -25,8 +25,15 @@ public class BasePage extends BaseClass {
         public static By btnHomeAnnouncementEdit = By.cssSelector("span[id*='spnEditSave']");
         public static By btnHomeAnnouncementDelete = By.cssSelector("a[id*='lnkDelete']");
         public static By btnHomeAnnouncementNew= By.cssSelector("span.fas.fa-edit");
-        //Insert New Announcement
-
+        //Insert OR Edit New Announcement
+        public static By txtAnnouncementTitle = By.cssSelector("input[id*='txtTitle']");
+        public static By txtAnnouncementSubTitle = By.cssSelector("input[id*='txtSubtitle']");
+        public static By txtAnnouncementMessage = By.cssSelector("textarea[id*='txtMessage']");
+        public static By txtAnnouncementPublishDate = By.cssSelector("input[id*='PublishDate_dateInput']");
+        public static By txtAnnouncementExpireDate = By.cssSelector("input[id*='ExpireDate_dateInput']");
+        public static By btnAnnouncementSave = By.cssSelector("span[id*='spnEditSave']");
+        public static By btnAnnouncementDelete = By.cssSelector("span.fa-trash");
+        //
     public static By btnHomeStudent = By.cssSelector("input[id*='cmdBrowseUsers']");
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");
     public static By btnHomeAgencies = By.cssSelector("input[id*='cmdBrowseEmployers']");
@@ -42,21 +49,4 @@ public class BasePage extends BaseClass {
     public static By btnHomeTakeTest = By.cssSelector("input[id*='cmdBrowseGroupSessions']");
     public static By btnHomeDashboard = By.cssSelector("input[id*='cmdDashboard']");
     public static By btnHomeLogout = By.cssSelector("input[id*='cmdLogout']");
-
-    //Wait Functions
-    public static void waitForPageToLoadCompletely(int seconds){
-        try {
-            ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
-                @NullableDecl
-                @Override
-                public Boolean apply(@NullableDecl WebDriver webDriver) {
-                    return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
-                }
-            };
-            WebDriverWait wait = new WebDriverWait(driver, seconds);
-            wait.until(pageLoadCondition);
-        } catch (Exception errorTimeout){
-            System.out.println("ERROR: Page did not load completely after " + seconds + "seconds of wait");
-        }
-    }
 }

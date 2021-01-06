@@ -1,7 +1,6 @@
 package stepdefs;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
+import cucumber.api.java.en.*;
 import framework.BaseClass;
 import org.junit.After;
 
@@ -20,8 +19,13 @@ public class HomepageSteps extends BaseClass {
         isAnnouncementDisplayed();
     }
 
-    @And("^Clicks the Announcement Title$")
-    public void clickAnnouncementTitle() {
+    @Then("^View the Announcement Text Message$")
+    public void viewAnnouncementTextMessage() {
         isTextMessageDisplayed();
+    }
+
+    @When("^Successfully inserts a new Announcement$")
+    public void insertNewAnnouncement() {
+        softAssert.assertTrue(isNewAnnouncementInserted(),"ASSERT: FAILED | New Announcemnet was NOT inserted.");
     }
 }

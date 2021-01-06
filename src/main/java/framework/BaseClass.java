@@ -1,12 +1,19 @@
 package framework;
 
+import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 public class BaseClass {
@@ -53,5 +60,28 @@ public class BaseClass {
             }
         }
         System.out.println("END: waitForElement() | " + element);
+    }
+
+    public static void waitForPageToLoadCompletely(int seconds){
+        try {
+            ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
+                @NullableDecl
+                @Override
+                public Boolean apply(@NullableDecl WebDriver webDriver) {
+                    return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+                }
+            };
+            WebDriverWait wait = new WebDriverWait(driver, seconds);
+            wait.until(pageLoadCondition);
+        } catch (Exception errorTimeout){
+            System.out.println("ERROR: Page did not load completely after " + seconds + "seconds of wait");
+        }
+    }
+
+    public static String getDateAndTime() {
+        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        Date date = new Date();
+        String dateAndTime= dateFormat.format(date);
+        return dateAndTime;
     }
 }
