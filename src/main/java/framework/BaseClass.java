@@ -4,6 +4,7 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
@@ -109,5 +110,13 @@ public class BaseClass {
         //Confirm Deletion
         driver.findElement(txtConfirmDelete).sendKeys("YES");
         driver.findElement(btnConfirmDelete).click();
+    }
+
+    public static void clickTableRowByText(String text) {
+        //Click the row to edit
+        WebElement table = driver.findElement(tblTable);
+        WebElement row = table.findElement(By.xpath("//tr/td[contains(text(), '" + text + "')]"));
+        row.click();
+        waitForPageToLoadCompletely(30);
     }
 }

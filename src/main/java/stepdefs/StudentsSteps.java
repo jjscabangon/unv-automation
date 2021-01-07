@@ -67,4 +67,9 @@ public class StudentsSteps extends BaseClass {
     public void stepAddNewStudentAttribute() {
         addNewStudentAttribute();
     }
+
+    @Then("^End User edits Student Attribute$")
+    public void stepEditStudentAttribute() {
+        editStudentAttribute();
+    }
 }

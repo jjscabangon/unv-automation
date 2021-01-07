@@ -43,7 +43,7 @@ Feature: Students
     And End User filters all Closed Student list
     And End User filters all Active Student list
 
-  @regression
+  @sanity
   Scenario: End User adds Student Attribute
     Given End User logs in
       | Username | Super    |
@@ -56,6 +56,9 @@ Feature: Students
     Given End User logs in
       | Username | Super    |
       | Password | Test1234 |
+    When End User adds a new Student
+    Then End User adds a new Student Attribute
+    Then End User edits Student Attribute
 
   @regression
   Scenario: End User deletes Student Attribute

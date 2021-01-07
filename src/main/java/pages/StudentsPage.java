@@ -23,9 +23,7 @@ public class StudentsPage extends BasePage {
     public static void editStudent() {
         System.out.println("START: editStudent()");
         //Click the Student to edit
-        WebElement table = driver.findElement(tblStudentTable);
-        WebElement student = table.findElement(tblStudentTableList);
-        student.click();
+        clickTableRowByText("AUTO");
         String currentDateAndTime = getDateAndTime();
         //Input Fist Name
         driver.findElement(txtStudentFirstName).clear();
@@ -40,9 +38,7 @@ public class StudentsPage extends BasePage {
     public static void deleteStudent() throws InterruptedException {
         System.out.println("START: deleteStudent()");
         //Click the Student to edit
-        WebElement table = driver.findElement(tblStudentTable);
-        WebElement student = table.findElement(tblStudentTableList);
-        student.click();
+        clickTableRowByText("AUTO");
         String currentDateAndTime = getDateAndTime();
         waitForPageToLoadCompletely(30);
         //Delete and Confirm
@@ -112,10 +108,7 @@ public class StudentsPage extends BasePage {
     public static void addNewStudentAttribute() {
         System.out.println("START: addNewStudentAttribute()");
         //Click the Student to edit
-        WebElement table = driver.findElement(tblStudentTable);
-        WebElement student = table.findElement(tblStudentTableList);
-        student.click();
-        waitForPageToLoadCompletely(30);
+        clickTableRowByText("AUTO");
         //Click the Attribute button
         driver.findElement(btnStudentAttribute).click();
         waitForPageToLoadCompletely(30);
@@ -133,6 +126,25 @@ public class StudentsPage extends BasePage {
         //Close Form and Save
         closeFormAndSave();
         System.out.println("END: addNewStudentAttribute()");
+    }
+
+    public static void editStudentAttribute() {
+        System.out.println("START: editStudentAttribute()");
+        //Click the Attribute to edit
+        clickTableRowByText("Languages");
+        //Select Attribute
+        selectDropdown(ddStudentAttribute, "Status");
+        //Select Attribute Value
+        selectDropdown(ddStudentAttributeValue, "Inactive");
+        //Input Effective Date
+        driver.findElement(txtStudentAttributeEffectiveDate).clear();
+        driver.findElement(txtStudentAttributeEffectiveDate).sendKeys("02/02/2021");
+        //Input Expiration Date
+        driver.findElement(txtStudentAttributeExpirationDate).clear();
+        driver.findElement(txtStudentAttributeExpirationDate).sendKeys("12/30/2025");
+        //Close Form and Save
+        closeFormAndSave();
+        System.out.println("END: editStudentAttribute()");
     }
 
     public static boolean isStudentAdded() {
