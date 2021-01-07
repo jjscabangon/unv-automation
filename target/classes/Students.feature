@@ -42,3 +42,23 @@ Feature: Students
     Then End User filters all Inactive Student list
     And End User filters all Closed Student list
     And End User filters all Active Student list
+
+  @regression
+  Scenario: End User adds Student Attribute
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Student
+    Then End User adds a new Student Attribute
+
+  @regression
+  Scenario: End User edits Student Attribute
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+
+  @regression
+  Scenario: End User deletes Student Attribute
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |

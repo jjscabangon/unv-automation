@@ -15,10 +15,7 @@ public class StudentsPage extends BasePage {
         driver.findElement(txtStudentFirstName).sendKeys("AUTO LNAME: TEST " + currentDateAndTime);
         //Input Last Name
         driver.findElement(txtStudentLastName).sendKeys("AUTO LNAME: TEST " + currentDateAndTime);
-        //Click Close Form button
-        driver.findElement(btnStudentCloseForm).click();
-        //Click Yes from Save Confirmation
-        driver.findElement(btnStudentSaveFormYes).click();
+        closeFormAndSave();
         System.out.println("END: addStudent()");
     }
 
@@ -36,10 +33,7 @@ public class StudentsPage extends BasePage {
         //Input Last Name
         driver.findElement(txtStudentLastName).clear();
         driver.findElement(txtStudentLastName).sendKeys("EDIT AUTO LNAME: TEST " + currentDateAndTime);
-        //Click Close Form button
-        driver.findElement(btnStudentCloseForm).click();
-        //Click Yes from Save Confirmation
-        driver.findElement(btnStudentSaveFormYes).click();
+        closeFormAndSave();
         System.out.println("END: editStudent()");
     }
 
@@ -51,11 +45,8 @@ public class StudentsPage extends BasePage {
         student.click();
         String currentDateAndTime = getDateAndTime();
         waitForPageToLoadCompletely(30);
-        //Click Delete button
-        driver.findElement(btnStudentDelete).click();
-        //Confirm Deletion
-        driver.findElement(txtStudentConfirmDelete).sendKeys("YES");
-        driver.findElement(btnStudentConfirmDelete).click();
+        //Delete and Confirm
+        deleteAndConfirm();
         System.out.println("END: deleteStudent()");
     }
 
@@ -129,9 +120,18 @@ public class StudentsPage extends BasePage {
         driver.findElement(btnStudentAttribute).click();
         waitForPageToLoadCompletely(30);
         //Click the Add New Attribute button
-        driver.findElement(btnStudentAAddNewAttribute);
+        driver.findElement(btnStudentAddNewAttribute).click();
         waitForPageToLoadCompletely(30);
-        //
+        //Select Attribute
+        selectDropdown(ddStudentAttribute, "Languages");
+        //Select Attribute Value
+        selectDropdown(ddStudentAttributeValue, "Russian");
+        //Input Effective Date
+        driver.findElement(txtStudentAttributeEffectiveDate).sendKeys("01/01/2021");
+        //Input Expiration Date
+        driver.findElement(txtStudentAttributeExpirationDate).sendKeys("12/01/2025");
+        //Close Form and Save
+        closeFormAndSave();
         System.out.println("END: addNewStudentAttribute()");
     }
 

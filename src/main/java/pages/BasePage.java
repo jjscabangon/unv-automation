@@ -8,6 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.*;
 
 public class BasePage extends BaseClass {
+    //Global
+        //Close Form and Save
+        public static By btnCloseForm = By.cssSelector("input#cmdClose");
+        public static By btnSaveFormYes = By.cssSelector("button#confirmationRevertYes");
+        //Delete and Confirm
+        public static By btnDelete = By.cssSelector("input#cmdDelete");
+        public static By txtConfirmDelete = By.cssSelector("input#confirmationRevertYesText");
+        public static By btnConfirmDelete = By.cssSelector("button#confirmationRevertYes");
+
     //Login Page
     public static By loginUsername = By.cssSelector("input#txtLoginID");
     public static By loginPassword = By.cssSelector("input#txtPassword");
@@ -42,13 +51,8 @@ public class BasePage extends BaseClass {
         public static By btnStudentAddNew = By.cssSelector("input#cmdInsert");
         public static By txtStudentFirstName = By.cssSelector("input#txtFName");
         public static By txtStudentLastName = By.cssSelector("input#txtLName");
-        public static By btnStudentCloseForm = By.cssSelector("input#cmdClose");
-        public static By btnStudentSaveFormYes = By.cssSelector("button#confirmationRevertYes");
         public static By tblStudentTable = By.cssSelector("table.ListTable");
         public static By tblStudentTableList = (By.xpath("//tr/td[contains(text(), 'AUTO')]"));;
-        public static By btnStudentDelete = By.cssSelector("input#cmdDelete");
-        public static By txtStudentConfirmDelete = By.cssSelector("input#confirmationRevertYesText");
-        public static By btnStudentConfirmDelete = By.cssSelector("button#confirmationRevertYes");
         //Search Students
         public static By btnStudentSearch = By.cssSelector("input#cmdSearch");
         public static By btnStudentSearchIntercept = By.cssSelector("span.fa-search");
@@ -60,7 +64,11 @@ public class BasePage extends BaseClass {
         public static By ddStudentFilter = By.cssSelector("select#ddStatus");
         //Student Attributes
         public static By btnStudentAttribute = By.cssSelector("input#cmdAttributes");
-        public static By btnStudentAAddNewAttribute = By.cssSelector("input#cmdInsert");
+        public static By btnStudentAddNewAttribute = By.cssSelector("input#cmdInsert");
+        public static By ddStudentAttribute = By.cssSelector("select#cboAttributeID");
+        public static By ddStudentAttributeValue = By.cssSelector("select#cboAttributeValueID");
+        public static By txtStudentAttributeEffectiveDate = By.cssSelector("input#txtEffectiveDate");
+        public static By txtStudentAttributeExpirationDate = By.cssSelector("input#txtExpirationDate");
 
     //Approve Student
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");
@@ -76,6 +84,7 @@ public class BasePage extends BaseClass {
 
     //Curriculum
     public static By btnHomeCurriculum = By.cssSelector("input[id*='cmdBrowseCurriculum']");
+    public static By btnCurriculumSearch = By.cssSelector("span.fa-search");
 
     //Item Headings
     public static By btnHomeItemHeadings = By.cssSelector("input[id*='cmdBrowseItemHeadings']");

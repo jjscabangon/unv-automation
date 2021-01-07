@@ -10,12 +10,12 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Properties;
+
+import static pages.BasePage.*;
 
 public class BaseClass {
     public static WebDriver driver;
@@ -94,5 +94,20 @@ public class BaseClass {
     public static void selectDropdown(By dropdown, String value) {
         Select ddStatus = new Select(driver.findElement(dropdown));
         ddStatus.selectByVisibleText(value);
+    }
+
+    public static void closeFormAndSave() {
+        //Click Close Form button
+        driver.findElement(btnCloseForm).click();
+        //Click Yes from Save Confirmation
+        driver.findElement(btnSaveFormYes).click();
+    }
+
+    public static void deleteAndConfirm() {
+        //Click Delete button
+        driver.findElement(btnDelete).click();
+        //Confirm Deletion
+        driver.findElement(txtConfirmDelete).sendKeys("YES");
+        driver.findElement(btnConfirmDelete).click();
     }
 }
