@@ -19,6 +19,11 @@ public class StudentsSteps extends BaseClass {
         addStudent();
     }
 
+    @Then("^End User edits a Student$")
+    public void stepEditStudent() {
+        editStudent();
+    }
+
     @Then("^New Student is added successfully$")
     public void stepVerifyNewStudent() {
         softAssert.assertTrue(isStudentAdded(),"ASSERT: FAILED | isStudentAdded()");
