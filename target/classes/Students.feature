@@ -26,9 +26,12 @@ Feature: Students
 
   @regression
   Scenario: End User search for a Student
-    Given
-    When
-    Then
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    Then End User searches for Students via First Name
+    And End User searches for Students via Last Name
+    And End User searches for Students via ID
 
   @regression
   Scenario: End User filters Student list

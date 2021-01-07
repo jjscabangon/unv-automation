@@ -38,16 +38,24 @@ public class BasePage extends BaseClass {
 
     //Student
     public static By btnHomeStudent = By.cssSelector("input[id*='cmdBrowseUsers']");
-    public static By btnStudentAddNew = By.cssSelector("input#cmdInsert");
-    public static By txtStudentFirstName = By.cssSelector("input#txtFName");
-    public static By txtStudentLastName = By.cssSelector("input#txtLName");
-    public static By btnStudentCloseForm = By.cssSelector("input#cmdClose");
-    public static By btnStudentSaveFormYes = By.cssSelector("button#confirmationRevertYes");
-    public static By tblStudentTable = By.cssSelector("table.ListTable");
-    public static By tblStudentTableList = (By.xpath("//tr/td[contains(text(), 'AUTO')]"));;
-    public static By btnStudentDelete = By.cssSelector("input#cmdDelete");
-    public static By txtStudentConfirmDelete = By.cssSelector("input#confirmationRevertYesText");
-    public static By btnStudentConfirmDelete = By.cssSelector("button#confirmationRevertYes");
+        //Add, Edit, or Delete Student
+        public static By btnStudentAddNew = By.cssSelector("input#cmdInsert");
+        public static By txtStudentFirstName = By.cssSelector("input#txtFName");
+        public static By txtStudentLastName = By.cssSelector("input#txtLName");
+        public static By btnStudentCloseForm = By.cssSelector("input#cmdClose");
+        public static By btnStudentSaveFormYes = By.cssSelector("button#confirmationRevertYes");
+        public static By tblStudentTable = By.cssSelector("table.ListTable");
+        public static By tblStudentTableList = (By.xpath("//tr/td[contains(text(), 'AUTO')]"));;
+        public static By btnStudentDelete = By.cssSelector("input#cmdDelete");
+        public static By txtStudentConfirmDelete = By.cssSelector("input#confirmationRevertYesText");
+        public static By btnStudentConfirmDelete = By.cssSelector("button#confirmationRevertYes");
+        //Search Students
+        public static By btnStudentSearch = By.cssSelector("input#cmdSearch");
+        public static By btnStudentSearchIntercept = By.cssSelector("span.fa-search");
+        public static By txtStudentSearchFirstName = By.cssSelector("input#txtFName");
+        public static By txtStudentSearchLastName = By.cssSelector("input#txtLName");
+        public static By txtStudentSearchID = By.cssSelector("input#txtEmployeeID");
+        public static By btnStudentPerformSearch = By.cssSelector("input#cmdSearch");
 
     //Approve Student
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");

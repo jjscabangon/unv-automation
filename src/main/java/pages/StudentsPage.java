@@ -1,6 +1,9 @@
 package pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class StudentsPage extends BasePage {
     //Add Student
@@ -59,6 +62,49 @@ public class StudentsPage extends BasePage {
         driver.findElement(txtStudentConfirmDelete).sendKeys("YES");
         driver.findElement(btnStudentConfirmDelete).click();
         System.out.println("END: deleteStudent()");
+    }
+
+    public static void searchStudentsFirstName() {
+        System.out.println("START: searchStudentsFirstName()");
+        //Click the Students menu
+        driver.findElement(btnHomeStudent).click();
+        waitForPageToLoadCompletely(30);
+        //Click the Search button
+        driver.findElement(btnStudentSearch).click();
+        driver.findElement(btnStudentSearchIntercept).click();
+        waitForPageToLoadCompletely(30);
+        //Search for First Name
+        driver.findElement(txtStudentSearchFirstName).sendKeys("AUTO");
+        driver.findElement(btnStudentPerformSearch).click();
+        System.out.println("END: searchStudentsFirstName()");
+    }
+
+    public static void searchStudentsLastName() {
+        System.out.println("START: searchStudentsLastName()");
+        //Click the Students menu
+        driver.findElement(btnHomeStudent).click();
+        waitForPageToLoadCompletely(30);
+        //Click the Search button
+        driver.findElement(btnStudentSearch).click();
+        waitForPageToLoadCompletely(30);
+        //Search for Last Name
+        driver.findElement(txtStudentSearchLastName).sendKeys("TEST");
+        driver.findElement(btnStudentPerformSearch).click();
+        System.out.println("END: searchStudentsLastName()");
+    }
+
+    public static void searchStudentsID() {
+        System.out.println("START: searchStudentsID()");
+        //Click the Students menu
+        driver.findElement(btnHomeStudent).click();
+        waitForPageToLoadCompletely(30);
+        //Click the Search button
+        driver.findElement(btnStudentSearch).click();
+        waitForPageToLoadCompletely(30);
+        //Search for ID
+        driver.findElement(txtStudentSearchID).sendKeys("AUTO");
+        driver.findElement(btnStudentPerformSearch).click();
+        System.out.println("END: searchStudentsID()");
     }
 
     public static boolean isStudentAdded() {

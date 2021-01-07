@@ -4,7 +4,6 @@ import cucumber.api.java.en.*;
 import framework.BaseClass;
 import org.junit.After;
 
-import static pages.HomepagePage.isAnnouncementDisplayed;
 import static pages.StudentsPage.*;
 
 public class StudentsSteps extends BaseClass {
@@ -32,5 +31,20 @@ public class StudentsSteps extends BaseClass {
     @Then("^New Student is added successfully$")
     public void stepVerifyNewStudent() {
         softAssert.assertTrue(isStudentAdded(),"ASSERT: FAILED | isStudentAdded()");
+    }
+
+    @Then("^End User searches for Students via First Name$")
+    public void stepSearchStudentsFName() {
+        searchStudentsFirstName();
+    }
+
+    @Then("^End User searches for Students via Last Name$")
+    public void stepSearchStudentsLName() {
+        searchStudentsLastName();
+    }
+
+    @Then("^End User searches for Students via ID$")
+    public void stepSearchStudentsID() {
+        searchStudentsID();
     }
 }
