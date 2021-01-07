@@ -9,7 +9,7 @@ Feature: Homepage
     When End User views Announcement
     Then View the Announcement Text Message
 
-  @regression
+  @sanity
   Scenario: End User inserts new Announcement
     Given End User logs in
       | Username | Super    |

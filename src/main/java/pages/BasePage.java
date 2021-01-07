@@ -38,6 +38,11 @@ public class BasePage extends BaseClass {
 
     //Student
     public static By btnHomeStudent = By.cssSelector("input[id*='cmdBrowseUsers']");
+    public static By btnStudentAddNew = By.cssSelector("input#cmdInsert");
+    public static By txtStudentFirstName = By.cssSelector("input#txtFName");
+    public static By txtStudentLastName = By.cssSelector("input#txtLName");
+    public static By btnStudentCloseForm = By.cssSelector("input#cmdClose");
+    public static By btnStudentSaveFormYes = By.cssSelector("button#confirmationRevertYes");
 
     //Approve Student
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");
