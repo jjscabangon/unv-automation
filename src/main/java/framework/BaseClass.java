@@ -104,6 +104,11 @@ public class BaseClass {
         driver.findElement(btnSaveFormYes).click();
     }
 
+    public static void closeForm() {
+        //Click Close Form button
+        driver.findElement(btnCloseForm).click();
+    }
+
     public static void deleteAndConfirm() {
         //Click Delete button
         driver.findElement(btnDelete).click();

@@ -13,68 +13,70 @@ public class StudentsSteps extends BaseClass {
         driver.quit();
     }
 
-    @When("^End User adds a new Student$")
-    public void stepAddNewStudent() {
-        addStudent();
-    }
+    //Students
+        @When("^End User adds a new Student$")
+        public void stepAddNewStudent() {
+            addStudent();
+        }
+        @Then("^End User edits a Student$")
+        public void stepEditStudent() {
+            editStudent();
+        }
+        @Then("^End User deletes a Student$")
+        public void stepDeleteStudent() throws InterruptedException {
+            deleteStudent();
+        }
+        @Then("^New Student is added successfully$")
+        public void stepVerifyNewStudent() {
+            softAssert.assertTrue(isStudentAdded(),"ASSERT: FAILED | isStudentAdded()");
+        }
 
-    @Then("^End User edits a Student$")
-    public void stepEditStudent() {
-        editStudent();
-    }
+    //Search
+        @Then("^End User searches for Students via First Name$")
+        public void stepSearchStudentsFName() {
+            searchStudentsFirstName();
+        }
+        @Then("^End User searches for Students via Last Name$")
+        public void stepSearchStudentsLName() {
+            searchStudentsLastName();
+        }
+        @Then("^End User searches for Students via ID$")
+        public void stepSearchStudentsID() {
+            searchStudentsID();
+        }
 
-    @Then("^End User deletes a Student$")
-    public void stepDeleteStudent() throws InterruptedException {
-        deleteStudent();
-    }
+    //Filter
+        @Then("^End User filters all Active Student list$")
+        public void stepFilterActiveStudents() {
+            filterActiveStudents();
+        }
+        @Then("^End User filters all Inactive Student list$")
+        public void stepFilterInactiveStudents() {
+            filterInactiveStudents();
+        }
+        @Then("^End User filters all Closed Student list$")
+        public void stepFilterClosedStudents() {
+            filterClosedStudents();
+        }
 
-    @Then("^New Student is added successfully$")
-    public void stepVerifyNewStudent() {
-        softAssert.assertTrue(isStudentAdded(),"ASSERT: FAILED | isStudentAdded()");
-    }
+    //Student Attribute
+        @Then("^End User adds a new Student Attribute$")
+        public void stepAddNewStudentAttribute() {
+            addNewStudentAttribute();
+        }
+        @Then("^End User edits Student Attribute$")
+        public void stepEditStudentAttribute() {
+            editStudentAttribute();
+        }
+        @Then("^End User deletes Student Attribute$")
+        public void stepDeleteStudentAttribute() {
+            deleteStudentAttribute();
+        }
 
-    @Then("^End User searches for Students via First Name$")
-    public void stepSearchStudentsFName() {
-        searchStudentsFirstName();
-    }
+    //Notes
+        @Then("^End User adds a new Note to Student$")
+        public void stepAddNewStudentNote() {
+            addNewStudentNote();
+        }
 
-    @Then("^End User searches for Students via Last Name$")
-    public void stepSearchStudentsLName() {
-        searchStudentsLastName();
-    }
-
-    @Then("^End User searches for Students via ID$")
-    public void stepSearchStudentsID() {
-        searchStudentsID();
-    }
-
-    @Then("^End User filters all Active Student list$")
-    public void stepFilterActiveStudents() {
-        filterActiveStudents();
-    }
-
-    @Then("^End User filters all Inactive Student list$")
-    public void stepFilterInactiveStudents() {
-        filterInactiveStudents();
-    }
-
-    @Then("^End User filters all Closed Student list$")
-    public void stepFilterClosedStudents() {
-        filterClosedStudents();
-    }
-
-    @Then("^End User adds a new Student Attribute$")
-    public void stepAddNewStudentAttribute() {
-        addNewStudentAttribute();
-    }
-
-    @Then("^End User edits Student Attribute$")
-    public void stepEditStudentAttribute() {
-        editStudentAttribute();
-    }
-
-    @Then("^End User deletes Student Attribute$")
-    public void stepDeleteStudentAttribute() {
-        deleteStudentAttribute();
-    }
 }

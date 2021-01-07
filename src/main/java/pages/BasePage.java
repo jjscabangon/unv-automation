@@ -69,6 +69,11 @@ public class BasePage extends BaseClass {
         public static By ddStudentAttributeValue = By.cssSelector("select#cboAttributeValueID");
         public static By txtStudentAttributeEffectiveDate = By.cssSelector("input#txtEffectiveDate");
         public static By txtStudentAttributeExpirationDate = By.cssSelector("input#txtExpirationDate");
+        //Student Notes
+        public static By btnStudentNotes = By.cssSelector("input#cmdComments");
+        public static By btnStudentAddNewNotes = By.cssSelector("input#cmdInsert");
+        public static By txtStudentNotesTitle = By.cssSelector("input#txtTitle");
+        public static By txtStudentNotesComment = By.cssSelector("textarea#txtComment");
 
     //Approve Student
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");

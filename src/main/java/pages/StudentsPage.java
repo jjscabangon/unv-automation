@@ -18,6 +18,9 @@ public class StudentsPage extends BasePage {
         closeFormAndSave();
         System.out.println("END: addStudent()");
     }
+    public static boolean isStudentAdded() {
+        return false;
+    }
 
     //Edit Student
     public static void editStudent() {
@@ -35,6 +38,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: editStudent()");
     }
 
+    //Delete Student
     public static void deleteStudent() throws InterruptedException {
         System.out.println("START: deleteStudent()");
         //Click the Student to edit
@@ -46,6 +50,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: deleteStudent()");
     }
 
+    //Search via First Name
     public static void searchStudentsFirstName() {
         System.out.println("START: searchStudentsFirstName()");
         clickMainMenu(btnHomeStudent);
@@ -59,6 +64,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: searchStudentsFirstName()");
     }
 
+    //Search via Last Name
     public static void searchStudentsLastName() {
         System.out.println("START: searchStudentsLastName()");
         clickMainMenu(btnHomeStudent);
@@ -71,6 +77,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: searchStudentsLastName()");
     }
 
+    //Search via Student ID
     public static void searchStudentsID() {
         System.out.println("START: searchStudentsID()");
         clickMainMenu(btnHomeStudent);
@@ -83,6 +90,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: searchStudentsID()");
     }
 
+    //Filter all Inactive Students
     public static void filterInactiveStudents() {
         System.out.println("START: filterInactiveStudents()");
         clickMainMenu(btnHomeStudent);
@@ -91,6 +99,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: filterInactiveStudents()");
     }
 
+    //Filter all Closed Students
     public static void filterClosedStudents() {
         System.out.println("START: filterClosedStudents()");
         //Select Closed Status
@@ -98,6 +107,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: filterClosedStudents()");
     }
 
+    //Filter all Active Students
     public static void filterActiveStudents() {
         System.out.println("START: filterActiveStudents()");
         //Select Active Status
@@ -105,6 +115,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: filterActiveStudents()");
     }
 
+    //Add New Attribute
     public static void addNewStudentAttribute() {
         System.out.println("START: addNewStudentAttribute()");
         //Click the Student to edit
@@ -128,6 +139,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: addNewStudentAttribute()");
     }
 
+    //Edit Attribute
     public static void editStudentAttribute() {
         System.out.println("START: editStudentAttribute()");
         //Click the Attribute to edit
@@ -147,6 +159,7 @@ public class StudentsPage extends BasePage {
         System.out.println("END: editStudentAttribute()");
     }
 
+    //Delete Attribute
     public static void deleteStudentAttribute() {
         System.out.println("START: deleteStudentAttribute()");
         //Click the Attribute to edit
@@ -156,7 +169,23 @@ public class StudentsPage extends BasePage {
         System.out.println("END: deleteStudentAttribute()");
     }
 
-    public static boolean isStudentAdded() {
-        return false;
+    //Add New Note
+    public static void addNewStudentNote() {
+        System.out.println("START: addNewStudentNote()");
+        //Click the Student to edit
+        clickTableRowByText("AUTO");
+        //Click the Notes button
+        driver.findElement(btnStudentNotes).click();
+        waitForPageToLoadCompletely(30);
+        //Click the Add New Notes button
+        driver.findElement(btnStudentAddNewNotes).click();
+        waitForPageToLoadCompletely(30);
+        String currentDateAndTime = getDateAndTime();
+        //Input Title
+        driver.findElement(txtStudentNotesTitle).sendKeys("AUTO Notes Title " + currentDateAndTime);
+        //Input Comments
+        driver.findElement(txtStudentNotesComment).sendKeys("AUTO Notes Comment " + currentDateAndTime);
+        closeFormAndSave();
+        System.out.println("END: addNewStudentNote()");
     }
 }

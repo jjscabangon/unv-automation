@@ -57,7 +57,7 @@ Feature: Students
       | Username | Super    |
       | Password | Test1234 |
     When End User adds a new Student
-    Then End User adds a new Student Attribute
+    And End User adds a new Student Attribute
     Then End User edits Student Attribute
 
   @regression
@@ -66,5 +66,13 @@ Feature: Students
       | Username | Super    |
       | Password | Test1234 |
     When End User adds a new Student
-    Then End User adds a new Student Attribute
+    And End User adds a new Student Attribute
     Then End User deletes Student Attribute
+
+  @regression
+  Scenario: End User adds a Note to Student
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Student
+    Then End User adds a new Note to Student
