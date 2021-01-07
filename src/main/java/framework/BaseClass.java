@@ -112,6 +112,12 @@ public class BaseClass {
         driver.findElement(btnConfirmDelete).click();
     }
 
+    public static void delete() {
+        //Click Delete button
+        driver.findElement(btnDelete).click();
+        driver.findElement(btnConfirmDelete).click();
+    }
+
     public static void clickTableRowByText(String text) {
         //Click the row to edit
         WebElement table = driver.findElement(tblTable);

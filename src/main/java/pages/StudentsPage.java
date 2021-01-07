@@ -147,6 +147,15 @@ public class StudentsPage extends BasePage {
         System.out.println("END: editStudentAttribute()");
     }
 
+    public static void deleteStudentAttribute() {
+        System.out.println("START: deleteStudentAttribute()");
+        //Click the Attribute to edit
+        clickTableRowByText("Languages");
+        //Delete and Confirm
+        delete();
+        System.out.println("END: deleteStudentAttribute()");
+    }
+
     public static boolean isStudentAdded() {
         return false;
     }

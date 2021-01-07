@@ -72,4 +72,9 @@ public class StudentsSteps extends BaseClass {
     public void stepEditStudentAttribute() {
         editStudentAttribute();
     }
+
+    @Then("^End User deletes Student Attribute$")
+    public void stepDeleteStudentAttribute() {
+        deleteStudentAttribute();
+    }
 }
