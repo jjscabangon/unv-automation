@@ -47,4 +47,19 @@ public class StudentsSteps extends BaseClass {
     public void stepSearchStudentsID() {
         searchStudentsID();
     }
+
+    @Then("^End User filters all Active Student list$")
+    public void stepFilterActiveStudents() {
+        filterActiveStudents();
+    }
+
+    @Then("^End User filters all Inactive Student list$")
+    public void stepFilterInactiveStudents() {
+        filterInactiveStudents();
+    }
+
+    @Then("^End User filters all Closed Student list$")
+    public void stepFilterClosedStudents() {
+        filterClosedStudents();
+    }
 }

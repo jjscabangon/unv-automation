@@ -24,7 +24,8 @@ Feature: Students
     When End User adds a new Student
     Then End User deletes a Student
 
-  @regression
+#  Blocked by UNV-122
+#  @regression
   Scenario: End User search for a Student
     Given End User logs in
       | Username | Super    |
@@ -35,6 +36,9 @@ Feature: Students
 
   @regression
   Scenario: End User filters Student list
-    Given
-    When
-    Then
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    Then End User filters all Inactive Student list
+    And End User filters all Closed Student list
+    And End User filters all Active Student list

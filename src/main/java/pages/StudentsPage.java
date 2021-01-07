@@ -3,15 +3,14 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class StudentsPage extends BasePage {
     //Add Student
     public static void addStudent() {
         System.out.println("START: addStudent()");
-        //Click the Students menu
-        driver.findElement(btnHomeStudent).click();
-        waitForPageToLoadCompletely(30);
+        clickMainMenu(btnHomeStudent);
         //Click the Add New Student button
         driver.findElement(btnStudentAddNew).click();
         waitForPageToLoadCompletely(30);
@@ -66,9 +65,7 @@ public class StudentsPage extends BasePage {
 
     public static void searchStudentsFirstName() {
         System.out.println("START: searchStudentsFirstName()");
-        //Click the Students menu
-        driver.findElement(btnHomeStudent).click();
-        waitForPageToLoadCompletely(30);
+        clickMainMenu(btnHomeStudent);
         //Click the Search button
         driver.findElement(btnStudentSearch).click();
         driver.findElement(btnStudentSearchIntercept).click();
@@ -81,9 +78,7 @@ public class StudentsPage extends BasePage {
 
     public static void searchStudentsLastName() {
         System.out.println("START: searchStudentsLastName()");
-        //Click the Students menu
-        driver.findElement(btnHomeStudent).click();
-        waitForPageToLoadCompletely(30);
+        clickMainMenu(btnHomeStudent);
         //Click the Search button
         driver.findElement(btnStudentSearch).click();
         waitForPageToLoadCompletely(30);
@@ -95,9 +90,7 @@ public class StudentsPage extends BasePage {
 
     public static void searchStudentsID() {
         System.out.println("START: searchStudentsID()");
-        //Click the Students menu
-        driver.findElement(btnHomeStudent).click();
-        waitForPageToLoadCompletely(30);
+        clickMainMenu(btnHomeStudent);
         //Click the Search button
         driver.findElement(btnStudentSearch).click();
         waitForPageToLoadCompletely(30);
@@ -105,6 +98,28 @@ public class StudentsPage extends BasePage {
         driver.findElement(txtStudentSearchID).sendKeys("AUTO");
         driver.findElement(btnStudentPerformSearch).click();
         System.out.println("END: searchStudentsID()");
+    }
+
+    public static void filterInactiveStudents() {
+        System.out.println("START: filterInactiveStudents()");
+        clickMainMenu(btnHomeStudent);
+        //Select Inactive Status
+        selectDropdown(ddStudentFilter,"Inactive");
+        System.out.println("END: filterInactiveStudents()");
+    }
+
+    public static void filterClosedStudents() {
+        System.out.println("START: filterClosedStudents()");
+        //Select Closed Status
+        selectDropdown(ddStudentFilter,"Closed");
+        System.out.println("END: filterClosedStudents()");
+    }
+
+    public static void filterActiveStudents() {
+        System.out.println("START: filterActiveStudents()");
+        //Select Active Status
+        selectDropdown(ddStudentFilter,"Active");
+        System.out.println("END: filterActiveStudents()");
     }
 
     public static boolean isStudentAdded() {

@@ -36,6 +36,9 @@ Feature: Students
 
   @regression
   Scenario: End User filters Student list
-    Given
-    When
-    Then
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    Then End User filters all Inactive Student list
+    And End User filters all Closed Student list
+    And End User filters all Active Student list

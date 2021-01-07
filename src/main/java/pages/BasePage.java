@@ -56,6 +56,8 @@ public class BasePage extends BaseClass {
         public static By txtStudentSearchLastName = By.cssSelector("input#txtLName");
         public static By txtStudentSearchID = By.cssSelector("input#txtEmployeeID");
         public static By btnStudentPerformSearch = By.cssSelector("input#cmdSearch");
+        //Filter Student List
+        public static By ddStudentFilter = By.cssSelector("select#ddStatus");
 
     //Approve Student
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");

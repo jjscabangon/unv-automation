@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
@@ -83,5 +84,15 @@ public class BaseClass {
         Date date = new Date();
         String dateAndTime= dateFormat.format(date);
         return dateAndTime;
+    }
+
+    public static void clickMainMenu(By menu) {
+        driver.findElement(menu).click();
+        waitForPageToLoadCompletely(30);
+    }
+
+    public static void selectDropdown(By dropdown, String value) {
+        Select ddStatus = new Select(driver.findElement(dropdown));
+        ddStatus.selectByVisibleText(value);
     }
 }
