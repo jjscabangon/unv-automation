@@ -15,6 +15,8 @@ public class BasePage extends BaseClass {
 
     //Homepage
     public static By homeHeaderTable = By.xpath("//*[contains(text(),'Logged in as:')]");
+
+    //Announcement
     public static By homeAnnouncementHeader = By.cssSelector("div.NewsHeaderText");
         //View Announcement
         public static By homeAnnouncementTitle = By.cssSelector("a[id*='ctlUCNewsItem_lblTitle']");
@@ -33,15 +35,32 @@ public class BasePage extends BaseClass {
         public static By txtAnnouncementExpireDate = By.cssSelector("input[id*='ExpireDate_dateInput']");
         public static By btnAnnouncementSave = By.cssSelector("span[id*='spnEditSave']");
         public static By btnAnnouncementDelete = By.cssSelector("span.fa-trash");
-        //
+
+    //Student
     public static By btnHomeStudent = By.cssSelector("input[id*='cmdBrowseUsers']");
+
+    //Approve Student
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");
+
+    //Agencies
     public static By btnHomeAgencies = By.cssSelector("input[id*='cmdBrowseEmployers']");
+
+    //Universities
     public static By btnHomeUniversities = By.cssSelector("input[id*='cmdBrowseAcademies']");
+
+    //University Classes
     public static By btnHomeUniversityClasses = By.cssSelector("input[id*='cmdBrowseGroups']");
+
+    //Curriculum
     public static By btnHomeCurriculum = By.cssSelector("input[id*='cmdBrowseCurriculum']");
+
+    //Item Headings
     public static By btnHomeItemHeadings = By.cssSelector("input[id*='cmdBrowseItemHeadings']");
+
+    //Media
     public static By btnHomeMedia = By.cssSelector("input[id*='cmdBrowseMedia']");
+
+    //Tests
     public static By btnHomeTests = By.cssSelector("input[id*='cmdBrowseTests']");
     public static By btnHomeTestSessions = By.cssSelector("input[id*='cmdBrowseTestSessions']");
     public static By btnHomeReports = By.cssSelector("input[id*='cmdBrowseReports']");
