@@ -24,6 +24,11 @@ public class StudentsSteps extends BaseClass {
         editStudent();
     }
 
+    @Then("^End User deletes a Student$")
+    public void stepDeleteStudent() throws InterruptedException {
+        deleteStudent();
+    }
+
     @Then("^New Student is added successfully$")
     public void stepVerifyNewStudent() {
         softAssert.assertTrue(isStudentAdded(),"ASSERT: FAILED | isStudentAdded()");

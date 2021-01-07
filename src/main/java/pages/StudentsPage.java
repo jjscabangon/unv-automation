@@ -26,7 +26,7 @@ public class StudentsPage extends BasePage {
 
     //Edit Student
     public static void editStudent() {
-        System.out.println("START: addStudent()");
+        System.out.println("START: editStudent()");
         //Click the Student to edit
         WebElement table = driver.findElement(tblStudentTable);
         WebElement student = table.findElement(tblStudentTableList);
@@ -42,11 +42,23 @@ public class StudentsPage extends BasePage {
         driver.findElement(btnStudentCloseForm).click();
         //Click Yes from Save Confirmation
         driver.findElement(btnStudentSaveFormYes).click();
-        System.out.println("END: addStudent()");
+        System.out.println("END: editStudent()");
     }
 
-    public static void deleteStudent() {
-
+    public static void deleteStudent() throws InterruptedException {
+        System.out.println("START: deleteStudent()");
+        //Click the Student to edit
+        WebElement table = driver.findElement(tblStudentTable);
+        WebElement student = table.findElement(tblStudentTableList);
+        student.click();
+        String currentDateAndTime = getDateAndTime();
+        waitForPageToLoadCompletely(30);
+        //Click Delete button
+        driver.findElement(btnStudentDelete).click();
+        //Confirm Deletion
+        driver.findElement(txtStudentConfirmDelete).sendKeys("YES");
+        driver.findElement(btnStudentConfirmDelete).click();
+        System.out.println("END: deleteStudent()");
     }
 
     public static boolean isStudentAdded() {

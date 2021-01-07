@@ -1,6 +1,6 @@
 Feature: Students
 
-  @regression
+  @sanity
   Scenario: End User adds a new Student
     Given End User logs in
       | Username | Super    |
@@ -18,9 +18,11 @@ Feature: Students
 
   @regression
   Scenario: End User deletes a Student
-    Given
-    When
-    Then
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Student
+    Then End User deletes a Student
 
   @regression
   Scenario: End User search for a Student

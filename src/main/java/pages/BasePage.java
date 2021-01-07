@@ -46,6 +46,8 @@ public class BasePage extends BaseClass {
     public static By tblStudentTable = By.cssSelector("table.ListTable");
     public static By tblStudentTableList = (By.xpath("//tr/td[contains(text(), 'AUTO')]"));;
     public static By btnStudentDelete = By.cssSelector("input#cmdDelete");
+    public static By txtStudentConfirmDelete = By.cssSelector("input#confirmationRevertYesText");
+    public static By btnStudentConfirmDelete = By.cssSelector("button#confirmationRevertYes");
 
     //Approve Student
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");
