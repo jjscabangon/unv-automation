@@ -68,8 +68,8 @@ public class HomepagePage extends BasePage {
         System.out.println("END: isTextMessageDisplayed()");
     }
 
-    public static boolean isNewAnnouncementInserted() {
-        System.out.println("START: isNewAnnouncementInserted()");
+    public static void insertNewAnnouncement() {
+        System.out.println("START: insertNewAnnouncement()");
         driver.findElement(btnHomeAnnouncementNew).click();
         waitForPageToLoadCompletely(30);
         String currentDateAndTime = getDateAndTime();
@@ -85,6 +85,29 @@ public class HomepagePage extends BasePage {
             driver.findElement(txtAnnouncementMessage).sendKeys("Message Regression Test " + currentDateAndTime);
             //Click the Save button
             driver.findElement(btnAnnouncementSave).click();
-        return false;
+        System.out.println("ASSERT: PASSED | insertNewAnnouncement()");
+        System.out.println("END: insertNewAnnouncement()");
     }
+
+    public static void editAnnouncement() {
+        System.out.println("START: editAnnouncement()");
+        driver.findElement(btnHomeAnnouncementEdit).click();
+        waitForPageToLoadCompletely(30);
+        String currentDateAndTime = getDateAndTime();
+        //Input Announcement Data
+            //Title
+            driver.findElement(txtAnnouncementTitle).clear();
+            driver.findElement(txtAnnouncementTitle).sendKeys("EDIT Title Regression Test " + currentDateAndTime);
+            //Subtitle
+            driver.findElement(txtAnnouncementSubTitle).clear();
+            driver.findElement(txtAnnouncementSubTitle).sendKeys("EDIT Subtitle Regression Test " + currentDateAndTime);
+            //Message
+            driver.findElement(txtAnnouncementMessage).clear();
+            driver.findElement(txtAnnouncementMessage).sendKeys("EDIT Message Regression Test " + currentDateAndTime);
+            //Click the Save button
+            driver.findElement(btnAnnouncementSave).click();
+        System.out.println("ASSERT: PASSED | editAnnouncement()");
+        System.out.println("END: editAnnouncement()");
+    }
+
 }

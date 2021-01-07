@@ -1,12 +1,9 @@
 package stepdefs;
 
 import cucumber.api.DataTable;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
+import cucumber.api.java.en.*;
 import framework.BaseClass;
 import org.junit.After;
-import org.junit.Assert;
-
 import static pages.LoginPage.*;
 
 public class LoginSteps extends BaseClass {
@@ -18,12 +15,12 @@ public class LoginSteps extends BaseClass {
 
     //Note that the step text from Feature file should exactly match the annotation text
     @Given("^End User logs in$")
-    public void endUserLogsInAs(DataTable loginCredentials) throws Exception {
+    public void stepEndUserLogsInAs(DataTable loginCredentials) throws Exception {
         initializeBrowser();
         login(loginCredentials);
     }
     @Then("^End User logged in successfully$")
-    public void endUserLoggedInSuccessffully() throws Exception {
-        softAssert.assertTrue(isLoginSuccessful(),"ASSERT: isLoginSuccessful() | FAILED");
+    public void stepEndUserLoggedInSuccessffully() throws Exception {
+        softAssert.assertTrue(isLoginSuccessful(),"ASSERT: FAILED | isLoginSuccessful()");
     }
 }

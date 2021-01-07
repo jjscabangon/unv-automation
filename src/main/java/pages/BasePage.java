@@ -22,7 +22,7 @@ public class BasePage extends BaseClass {
         public static By homeAnnouncementTextMessage = By.cssSelector("textarea[id*='txtMessage']");
         public static By homeAnnouncementDate = By.cssSelector("span[id*='ctlUCNewsItem_lblPosted']");
         public static By homeAnnouncementStatus = By.cssSelector("span[id*='ctlUCNewsItem_lblStatus']");
-        public static By btnHomeAnnouncementEdit = By.cssSelector("span[id*='spnEditSave']");
+        public static By btnHomeAnnouncementEdit = By.cssSelector("span.fa-pencil-alt");
         public static By btnHomeAnnouncementDelete = By.cssSelector("a[id*='lnkDelete']");
         public static By btnHomeAnnouncementNew= By.cssSelector("span.fas.fa-edit");
         //Insert OR Edit New Announcement
