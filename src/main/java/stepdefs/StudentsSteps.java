@@ -62,4 +62,9 @@ public class StudentsSteps extends BaseClass {
     public void stepFilterClosedStudents() {
         filterClosedStudents();
     }
+
+    @Then("^End User adds a new Student Attribute$")
+    public void stepAddNewStudentAttribute() {
+        addNewStudentAttribute();
+    }
 }

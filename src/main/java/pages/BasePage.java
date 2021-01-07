@@ -58,6 +58,9 @@ public class BasePage extends BaseClass {
         public static By btnStudentPerformSearch = By.cssSelector("input#cmdSearch");
         //Filter Student List
         public static By ddStudentFilter = By.cssSelector("select#ddStatus");
+        //Student Attributes
+        public static By btnStudentAttribute = By.cssSelector("input#cmdAttributes");
+        public static By btnStudentAAddNewAttribute = By.cssSelector("input#cmdInsert");
 
     //Approve Student
     public static By btnHomeApproveStudents = By.cssSelector("input[id*='cmdApproveUsers']");

@@ -1,10 +1,6 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class StudentsPage extends BasePage {
     //Add Student
@@ -120,6 +116,23 @@ public class StudentsPage extends BasePage {
         //Select Active Status
         selectDropdown(ddStudentFilter,"Active");
         System.out.println("END: filterActiveStudents()");
+    }
+
+    public static void addNewStudentAttribute() {
+        System.out.println("START: addNewStudentAttribute()");
+        //Click the Student to edit
+        WebElement table = driver.findElement(tblStudentTable);
+        WebElement student = table.findElement(tblStudentTableList);
+        student.click();
+        waitForPageToLoadCompletely(30);
+        //Click the Attribute button
+        driver.findElement(btnStudentAttribute).click();
+        waitForPageToLoadCompletely(30);
+        //Click the Add New Attribute button
+        driver.findElement(btnStudentAAddNewAttribute);
+        waitForPageToLoadCompletely(30);
+        //
+        System.out.println("END: addNewStudentAttribute()");
     }
 
     public static boolean isStudentAdded() {
