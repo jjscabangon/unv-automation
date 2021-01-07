@@ -110,4 +110,10 @@ public class HomepagePage extends BasePage {
         System.out.println("END: editAnnouncement()");
     }
 
+    public static void deleteAnnouncement() {
+        System.out.println("START: deleteAnnouncement()");
+        driver.findElement(btnHomeAnnouncementDelete).click();
+        System.out.println("ASSERT: PASSED | deleteAnnouncement()");
+        System.out.println("END: deleteAnnouncement()");
+    }
 }

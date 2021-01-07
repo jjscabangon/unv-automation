@@ -33,4 +33,8 @@ public class HomepageSteps extends BaseClass {
     public void stepEditAnnouncement() {
         editAnnouncement();
     }
+    @When("^Successfully deletes an Announcement$")
+    public void stepDeleteAnnouncement() {
+        deleteAnnouncement();
+    }
 }
