@@ -5,4 +5,13 @@ Feature: Agencies
     Given End User logs in
       | Username | Super    |
       | Password | Test1234 |
+    Then End User adds a new Agency
+
+  @regression
+  Scenario: End User edits an Agency
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
     When End User adds a new Agency
+    Then End User edits an Agency
+

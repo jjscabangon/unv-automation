@@ -4,7 +4,7 @@ import cucumber.api.java.en.Then;
 import framework.BaseClass;
 import org.junit.After;
 
-import static pages.AgenciesPage.addNewAgency;
+import static pages.AgenciesPage.*;
 
 public class AgenciesStep extends BaseClass {
     //Always put this on each of stepdefs to clear chromedriver every test script
@@ -13,9 +13,14 @@ public class AgenciesStep extends BaseClass {
         driver.quit();
     }
 
-    @Then("^End User adds a new Agency$")
-    public void stepAddNewAgency() throws Exception {
-        addNewAgency();
-    }
+    //Add, edit, delete an Agency
+        @Then("^End User adds a new Agency$")
+        public void stepAddNewAgency() throws Exception {
+            addNewAgency();
+        }
+        @Then("^End User edits an Agency$")
+        public void stepEditAgency() throws Exception {
+            editAgency();
+        }
 
 }
