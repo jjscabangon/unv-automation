@@ -158,4 +158,15 @@ public class AgenciesPage extends BasePage {
         closeFormAndSave();
         System.out.println("END: editNoteAgencyAdmin()");
     }
+
+    //PENDING FOR BUSINESS CONFIRMATION
+    //Delete Note of Agency Administrator
+    public static void deleteNoteAgencyAdmin() {
+        System.out.println("START: deleteNoteAgencyAdmin()");
+        //Click row to Edit
+        clickTableRowByText("AUTO");
+        //Delete
+        delete();
+        System.out.println("END: deleteNoteAgencyAdmin()");
+    }
 }
