@@ -89,4 +89,27 @@ public class AgenciesPage extends BasePage {
         closeFormAndSave();
         System.out.println("END: addNewAgencyAdmin()");
     }
+
+    //Edit Agency Administrator
+    public static void editAgencyAdmin() {
+        System.out.println("START: editAgencyAdmin()");
+        //Click row to Add Administrator
+        clickTableRowByText("AUTO");
+        waitForPageToLoadCompletely(30);
+        String currentDateAndTime = getDateAndTimeNoFormat();
+        //Input First Name
+        driver.findElement(txtAgencyAdminFirstname).clear();
+        driver.findElement(txtAgencyAdminFirstname).sendKeys("EDIT AUTO Fname " + currentDateAndTime);
+        //Input Last Name
+        driver.findElement(txtAgencyAdminLastname).clear();
+        driver.findElement(txtAgencyAdminLastname).sendKeys("EDIT AUTO Lname " + currentDateAndTime);
+        //Input Login ID
+        driver.findElement(txtAgencyAdminLoginID).clear();
+        driver.findElement(txtAgencyAdminLoginID).sendKeys("AgencyAdmin" + currentDateAndTime);
+        //Input Password
+        driver.findElement(txtAgencyAdminLoginPassword).sendKeys("Test1234");
+        //Close Form and Save
+        closeFormAndSave();
+        System.out.println("END: editAgencyAdmin()");
+    }
 }

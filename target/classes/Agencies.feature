@@ -30,3 +30,12 @@ Feature: Agencies
       | Password | Test1234 |
     When End User adds a new Agency
     Then End User adds a new Agency Administrator
+
+  @regression
+  Scenario: End User edits an Agency Administrator
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Agency
+    And End User adds a new Agency Administrator
+    Then End User edits an Agency Administrator
