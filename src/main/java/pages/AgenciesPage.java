@@ -144,4 +144,18 @@ public class AgenciesPage extends BasePage {
         closeFormAndSave();
         System.out.println("END: addNoteAgencyAdmin()");
     }
+
+    //Edit Note of Agency Administrator
+    public static void editNoteAgencyAdmin() {
+        System.out.println("START: editNoteAgencyAdmin()");
+        //Click row to Edit
+        clickTableRowByText("AUTO");
+        String currentDateAndTime = getDateAndTimeNoFormat();
+        //Input Title
+        driver.findElement(txtAgencyAdminNotesTitle).clear();
+        driver.findElement(txtAgencyAdminNotesTitle).sendKeys("EDIT AUTO Title " + currentDateAndTime);
+        //Close Form and Save
+        closeFormAndSave();
+        System.out.println("END: editNoteAgencyAdmin()");
+    }
 }

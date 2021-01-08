@@ -46,4 +46,8 @@ public class AgenciesStep extends BaseClass {
         public void stepAddNoteAgencyAdmin() throws Exception {
             addNoteAgencyAdmin();
         }
+        @Then("^End User edits Note of Agency Administrator$")
+        public void stepEditNoteAgencyAdmin() throws Exception {
+            editNoteAgencyAdmin();
+        }
 }
