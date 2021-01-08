@@ -27,4 +27,9 @@ public class AgenciesStep extends BaseClass {
             deleteAgency();
         }
 
+    //Add, edit, delete an Agency Administrator
+        @Then("^End User adds a new Agency Administrator$")
+        public void stepAddNewAgencyAdmin() throws Exception {
+            addNewAgencyAdmin();
+        }
 }

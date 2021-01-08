@@ -8,7 +8,7 @@ public class StudentsPage extends BasePage {
         //Click the Add New Student button
         driver.findElement(btnStudentAddNew).click();
         waitForPageToLoadCompletely(30);
-        String currentDateAndTime = getDateAndTime();
+        String currentDateAndTime = getDateAndTimeNoFormat();
         //Input Fist Name
         driver.findElement(txtStudentFirstName).sendKeys("AUTO LNAME: TEST " + currentDateAndTime);
         //Input Last Name
@@ -26,7 +26,7 @@ public class StudentsPage extends BasePage {
         System.out.println("START: editStudent()");
         //Click the Student to edit
         clickTableRowByText("AUTO");
-        String currentDateAndTime = getDateAndTime();
+        String currentDateAndTime = getDateAndTimeNoFormat();
         //Input Fist Name
         driver.findElement(txtStudentFirstName).clear();
         driver.findElement(txtStudentFirstName).sendKeys("EDIT AUTO LNAME: TEST " + currentDateAndTime);
@@ -44,7 +44,7 @@ public class StudentsPage extends BasePage {
         selectDropdown(ddStudentFilter, statusFrom);
         //Click the Student to edit
         clickTableRowByText("AUTO");
-        String currentDateAndTime = getDateAndTime();
+        String currentDateAndTime = getDateAndTimeNoFormat();
         //Select Status
         selectDropdown(ddStudentStatus, statusTo);
         //Close Form and Save
@@ -57,7 +57,7 @@ public class StudentsPage extends BasePage {
         System.out.println("START: deleteStudent()");
         //Click the Student to edit
         clickTableRowByText("AUTO");
-        String currentDateAndTime = getDateAndTime();
+        String currentDateAndTime = getDateAndTimeNoFormat();
         waitForPageToLoadCompletely(30);
         //Delete and Confirm
         deleteAndConfirm();
@@ -194,7 +194,7 @@ public class StudentsPage extends BasePage {
         //Click the Add New Notes button
         driver.findElement(btnStudentAddNewNotes).click();
         waitForPageToLoadCompletely(30);
-        String currentDateAndTime = getDateAndTime();
+        String currentDateAndTime = getDateAndTimeNoFormat();
         //Input Title
         driver.findElement(txtStudentNotesTitle).sendKeys("AUTO Notes Title " + currentDateAndTime);
         //Input Comments
@@ -210,7 +210,7 @@ public class StudentsPage extends BasePage {
         //Click the Notes to edit
         clickTableRowByText("AUTO");
         //Input Title
-        String currentDateAndTime = getDateAndTime();
+        String currentDateAndTime = getDateAndTimeNoFormat();
         driver.findElement(txtStudentNotesTitle).clear();
         driver.findElement(txtStudentNotesTitle).sendKeys("EDIT AUTO Notes Title " + currentDateAndTime);
         //Close Form and Save

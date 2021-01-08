@@ -72,7 +72,7 @@ public class HomepagePage extends BasePage {
         System.out.println("START: insertNewAnnouncement()");
         driver.findElement(btnHomeAnnouncementNew).click();
         waitForPageToLoadCompletely(30);
-        String currentDateAndTime = getDateAndTime();
+        String currentDateAndTime = getDateAndTimeNoFormat();
         //Input Announcement Data
             //Title
             driver.findElement(txtAnnouncementTitle).clear();
@@ -93,7 +93,7 @@ public class HomepagePage extends BasePage {
         System.out.println("START: editAnnouncement()");
         driver.findElement(btnHomeAnnouncementEdit).click();
         waitForPageToLoadCompletely(30);
-        String currentDateAndTime = getDateAndTime();
+        String currentDateAndTime = getDateAndTimeNoFormat();
         //Input Announcement Data
             //Title
             driver.findElement(txtAnnouncementTitle).clear();

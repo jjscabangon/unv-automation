@@ -80,8 +80,8 @@ public class BaseClass {
         }
     }
 
-    public static String getDateAndTime() {
-        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+    public static String getDateAndTimeNoFormat() {
+        DateFormat dateFormat = new SimpleDateFormat("MMddyyyyHHmmss");
         Date date = new Date();
         String dateAndTime= dateFormat.format(date);
         return dateAndTime;

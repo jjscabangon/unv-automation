@@ -83,12 +83,19 @@ public class BasePage extends BaseClass {
     public static By btnHomeAgencies = By.cssSelector("input[id*='cmdBrowseEmployers']");
         //Add, Edit, and Delete Agency
         public static By btnAgencyAddNewAgency = By.cssSelector("input#cmdInsert");
-        public static By btnAgencyName = By.cssSelector("input#txtName");
-        public static By btnAgencyAddress1 = By.cssSelector("input#txtAddress1");
-        public static By btnAgencyAddress2 = By.cssSelector("input#txtAddress2");
-        public static By btnAgencyCity = By.cssSelector("input#txtCity");
-        public static By btnAgencyState = By.cssSelector("select#cboStateID");
-        public static By btnAgencyZip = By.cssSelector("input#txtZip");
+        public static By txtAgencyName = By.cssSelector("input#txtName");
+        public static By txtAgencyAddress1 = By.cssSelector("input#txtAddress1");
+        public static By txtAgencyAddress2 = By.cssSelector("input#txtAddress2");
+        public static By txtAgencyCity = By.cssSelector("input#txtCity");
+        public static By dddAgencyState = By.cssSelector("select#cboStateID");
+        public static By txtAgencyZip = By.cssSelector("input#txtZip");
+        //Add, Edit, and Delete Agency Administrator
+        public static By btnAgencyAdmin = By.cssSelector("input#cmdContacts");
+        public static By btnAgencyAdminAddNewAdmin = By.cssSelector("input#cmdInsert");
+        public static By txtAgencyAdminFirstname = By.cssSelector("input#txtFName");
+        public static By txtAgencyAdminLastname = By.cssSelector("input#txtLName");
+        public static By txtAgencyAdminLoginID = By.cssSelector("input#txtLoginID");
+        public static By txtAgencyAdminLoginPassword = By.cssSelector("input#txtPassword");
 
     //Universities
     public static By btnHomeUniversities = By.cssSelector("input[id*='cmdBrowseAcademies']");
