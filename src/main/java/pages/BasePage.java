@@ -53,6 +53,7 @@ public class BasePage extends BaseClass {
         public static By btnStudentAddNew = By.cssSelector("input#cmdInsert");
         public static By txtStudentFirstName = By.cssSelector("input#txtFName");
         public static By txtStudentLastName = By.cssSelector("input#txtLName");
+        public static By ddStudentStatus = By.cssSelector("select#ddlStatus");
         //Search Students
         public static By btnStudentSearch = By.cssSelector("input#cmdSearch");
         public static By btnStudentSearchIntercept = By.cssSelector("span.fa-search");

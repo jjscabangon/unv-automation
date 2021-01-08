@@ -17,6 +17,15 @@ Feature: Students
     Then End User edits a Student
 
   @regression
+  Scenario: End User edits a Student Status
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Student
+    Then End User tags a Student from Active to Inactive
+    And End User tags a Student from Inactive to Active
+
+  @regression
   Scenario: End User deletes a Student
     Given End User logs in
       | Username | Super    |

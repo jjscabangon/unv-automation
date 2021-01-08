@@ -22,6 +22,10 @@ public class StudentsSteps extends BaseClass {
         public void stepEditStudent() {
             editStudent();
         }
+        @Then("^End User tags a Student from (Active|Inactive|Closed) to (Active|Inactive|Closed)$")
+        public void stepTagStudentActive(String statusFrom, String statusTo) {
+            editStudentStatus(statusFrom, statusTo);
+        }
         @Then("^End User deletes a Student$")
         public void stepDeleteStudent() throws InterruptedException {
             deleteStudent();

@@ -38,6 +38,21 @@ public class StudentsPage extends BasePage {
         System.out.println("END: editStudent()");
     }
 
+    //Edit Student Status
+    public static void editStudentStatus(String statusFrom, String statusTo) {
+        System.out.println("START: editStudentStatus()");
+        System.out.println("editStudentStatus() | FROM: " + statusFrom + " TO: " + statusTo);
+        selectDropdown(ddStudentFilter,statusFrom);
+        //Click the Student to edit
+        clickTableRowByText("AUTO");
+        String currentDateAndTime = getDateAndTime();
+        //Select Status
+        selectDropdown(ddStudentStatus,statusTo);
+        //Close Form and Save
+        closeFormAndSave();
+        System.out.println("END: editStudentStatus()");
+    }
+
     //Delete Student
     public static void deleteStudent() throws InterruptedException {
         System.out.println("START: deleteStudent()");
