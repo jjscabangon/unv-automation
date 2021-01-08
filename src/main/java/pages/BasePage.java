@@ -96,6 +96,11 @@ public class BasePage extends BaseClass {
         public static By txtAgencyAdminLastname = By.cssSelector("input#txtLName");
         public static By txtAgencyAdminLoginID = By.cssSelector("input#txtLoginID");
         public static By txtAgencyAdminLoginPassword = By.cssSelector("input#txtPassword");
+        //Add, Edit, and Delete Notes of Agency Administrator
+        public static By btnAgencyAdminNotes = By.cssSelector("input#cmdComments");
+        public static By btnAgencyAdminAddNewNotes = By.cssSelector("input#cmdInsert");
+        public static By txtAgencyAdminNotesTitle = By.cssSelector("input#txtTitle");
+        public static By txtAgencyAdminNotesComment = By.cssSelector("textarea#txtComment");
 
     //Universities
     public static By btnHomeUniversities = By.cssSelector("input[id*='cmdBrowseAcademies']");

@@ -1,6 +1,6 @@
 Feature: Students
 
-  @sanity
+  @regression
   Scenario: End User adds a new Student
     Given End User logs in
       | Username | Super    |
@@ -52,7 +52,7 @@ Feature: Students
     And End User filters all Closed Student list
     And End User filters all Active Student list
 
-  @sanity
+  @regression
   Scenario: End User adds Student Attribute
     Given End User logs in
       | Username | Super    |

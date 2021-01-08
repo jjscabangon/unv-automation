@@ -123,4 +123,25 @@ public class AgenciesPage extends BasePage {
         delete();
         System.out.println("END: deleteAgencyAdmin()");
     }
+
+    //Add Note to Agency Administrator
+    public static void addNoteAgencyAdmin() {
+        System.out.println("START: addNoteAgencyAdmin()");
+        //Click row to Edit
+        clickTableRowByText("AUTO");
+        //Click the Notes button
+        driver.findElement(btnAgencyAdminNotes).click();
+        waitForPageToLoadCompletely(30);
+        //Click the Add New Notes button
+        driver.findElement(btnAgencyAdminAddNewNotes).click();
+        waitForPageToLoadCompletely(30);
+        String currentDateAndTime = getDateAndTimeNoFormat();
+        //Input Title
+        driver.findElement(txtAgencyAdminNotesTitle).sendKeys("AUTO Title " + currentDateAndTime);
+        //Input Comment
+        driver.findElement(txtAgencyAdminNotesComment).sendKeys("AUTO Comment " + currentDateAndTime);
+        //Close Form and Save
+        closeFormAndSave();
+        System.out.println("END: addNoteAgencyAdmin()");
+    }
 }
