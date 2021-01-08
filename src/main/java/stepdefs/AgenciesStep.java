@@ -22,5 +22,9 @@ public class AgenciesStep extends BaseClass {
         public void stepEditAgency() throws Exception {
             editAgency();
         }
+        @Then("^End User deletes an Agency$")
+        public void stepDeleteAgency() throws Exception {
+            deleteAgency();
+        }
 
 }

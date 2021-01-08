@@ -47,4 +47,12 @@ public class AgenciesPage extends BasePage {
         closeFormAndSave();
         System.out.println("END: editAgency()");
     }
+    public static void deleteAgency() {
+        System.out.println("START: deleteAgency()");
+        //Click row to edit
+        clickTableRowByText("AUTO");
+        //Delete
+        delete();
+        System.out.println("END: deleteAgency()");
+    }
 }

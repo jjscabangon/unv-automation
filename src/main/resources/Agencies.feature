@@ -15,3 +15,10 @@ Feature: Agencies
     When End User adds a new Agency
     Then End User edits an Agency
 
+  @regression
+  Scenario: End User deletes an Agency
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Agency
+    Then End User deletes an Agency
