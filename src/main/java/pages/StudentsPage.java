@@ -1,7 +1,5 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
-
 public class StudentsPage extends BasePage {
     //Add Student
     public static void addStudent() {
@@ -18,6 +16,7 @@ public class StudentsPage extends BasePage {
         closeFormAndSave();
         System.out.println("END: addStudent()");
     }
+
     public static boolean isStudentAdded() {
         return false;
     }
@@ -42,12 +41,12 @@ public class StudentsPage extends BasePage {
     public static void editStudentStatus(String statusFrom, String statusTo) {
         System.out.println("START: editStudentStatus()");
         System.out.println("editStudentStatus() | FROM: " + statusFrom + " TO: " + statusTo);
-        selectDropdown(ddStudentFilter,statusFrom);
+        selectDropdown(ddStudentFilter, statusFrom);
         //Click the Student to edit
         clickTableRowByText("AUTO");
         String currentDateAndTime = getDateAndTime();
         //Select Status
-        selectDropdown(ddStudentStatus,statusTo);
+        selectDropdown(ddStudentStatus, statusTo);
         //Close Form and Save
         closeFormAndSave();
         System.out.println("END: editStudentStatus()");
@@ -110,7 +109,7 @@ public class StudentsPage extends BasePage {
         System.out.println("START: filterInactiveStudents()");
         clickMainMenu(btnHomeStudent);
         //Select Inactive Status
-        selectDropdown(ddStudentFilter,"Inactive");
+        selectDropdown(ddStudentFilter, "Inactive");
         System.out.println("END: filterInactiveStudents()");
     }
 
@@ -118,7 +117,7 @@ public class StudentsPage extends BasePage {
     public static void filterClosedStudents() {
         System.out.println("START: filterClosedStudents()");
         //Select Closed Status
-        selectDropdown(ddStudentFilter,"Closed");
+        selectDropdown(ddStudentFilter, "Closed");
         System.out.println("END: filterClosedStudents()");
     }
 
@@ -126,7 +125,7 @@ public class StudentsPage extends BasePage {
     public static void filterActiveStudents() {
         System.out.println("START: filterActiveStudents()");
         //Select Active Status
-        selectDropdown(ddStudentFilter,"Active");
+        selectDropdown(ddStudentFilter, "Active");
         System.out.println("END: filterActiveStudents()");
     }
 

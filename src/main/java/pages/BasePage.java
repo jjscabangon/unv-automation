@@ -81,6 +81,14 @@ public class BasePage extends BaseClass {
 
     //Agencies
     public static By btnHomeAgencies = By.cssSelector("input[id*='cmdBrowseEmployers']");
+        //Add, Edit, and Delete Agency
+        public static By btnAgencyAddNewAgency = By.cssSelector("input#cmdInsert");
+        public static By btnAgencyName = By.cssSelector("input#txtName");
+        public static By btnAgencyAddress1 = By.cssSelector("input#txtAddress1");
+        public static By btnAgencyAddress2 = By.cssSelector("input#txtAddress2");
+        public static By btnAgencyCity = By.cssSelector("input#txtCity");
+        public static By btnAgencyState = By.cssSelector("select#cboStateID");
+        public static By btnAgencyZip = By.cssSelector("input#txtZip");
 
     //Universities
     public static By btnHomeUniversities = By.cssSelector("input[id*='cmdBrowseAcademies']");
