@@ -76,3 +76,13 @@ Feature: Students
       | Password | Test1234 |
     When End User adds a new Student
     Then End User adds a new Note to Student
+
+  @regression
+  Scenario: End User edits a Note to Student
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Student
+    Then End User adds a new Note to Student
+    Then End User edits Note of Student
+

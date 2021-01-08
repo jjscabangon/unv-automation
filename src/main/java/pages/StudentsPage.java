@@ -185,7 +185,22 @@ public class StudentsPage extends BasePage {
         driver.findElement(txtStudentNotesTitle).sendKeys("AUTO Notes Title " + currentDateAndTime);
         //Input Comments
         driver.findElement(txtStudentNotesComment).sendKeys("AUTO Notes Comment " + currentDateAndTime);
+        //Close Form and Save
         closeFormAndSave();
         System.out.println("END: addNewStudentNote()");
+    }
+
+    //Edit Notes
+    public static void editNewStudentNote() {
+        System.out.println("START: editNewStudentNote()");
+        //Click the Notes to edit
+        clickTableRowByText("AUTO");
+        //Input Title
+        String currentDateAndTime = getDateAndTime();
+        driver.findElement(txtStudentNotesTitle).clear();
+        driver.findElement(txtStudentNotesTitle).sendKeys("EDIT AUTO Notes Title " + currentDateAndTime);
+        //Close Form and Save
+        closeFormAndSave();
+        System.out.println("END: editNewStudentNote()");
     }
 }
