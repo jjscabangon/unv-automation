@@ -81,7 +81,7 @@ public class BaseClass {
     }
 
     public static String getDateAndTimeNoFormat() {
-        DateFormat dateFormat = new SimpleDateFormat("MMddyyyyHHmmss");
+        DateFormat dateFormat = new SimpleDateFormat("MMddyyHHmmss");
         Date date = new Date();
         String dateAndTime= dateFormat.format(date);
         return dateAndTime;

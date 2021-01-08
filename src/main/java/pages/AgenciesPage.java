@@ -82,7 +82,7 @@ public class AgenciesPage extends BasePage {
         //Input Last Name
         driver.findElement(txtAgencyAdminLastname).sendKeys("AUTO Lname " + currentDateAndTime);
         //Input Login ID
-        driver.findElement(txtAgencyAdminLoginID).sendKeys("AgencyAdmin" + currentDateAndTime);
+        driver.findElement(txtAgencyAdminLoginID).sendKeys("AAdmin" + currentDateAndTime);
         //Input Password
         driver.findElement(txtAgencyAdminLoginPassword).sendKeys("Test1234");
         //Close Form and Save
@@ -105,11 +105,22 @@ public class AgenciesPage extends BasePage {
         driver.findElement(txtAgencyAdminLastname).sendKeys("EDIT AUTO Lname " + currentDateAndTime);
         //Input Login ID
         driver.findElement(txtAgencyAdminLoginID).clear();
-        driver.findElement(txtAgencyAdminLoginID).sendKeys("AgencyAdmin" + currentDateAndTime);
+        driver.findElement(txtAgencyAdminLoginID).sendKeys("AAdmin" + currentDateAndTime);
         //Input Password
         driver.findElement(txtAgencyAdminLoginPassword).sendKeys("Test1234");
         //Close Form and Save
         closeFormAndSave();
         System.out.println("END: editAgencyAdmin()");
+    }
+
+    //Delete Agency Administrator
+    public static void deleteAgencyAdmin() {
+        System.out.println("START: deleteAgencyAdmin()");
+        //Click row to Add Administrator
+        clickTableRowByText("AUTO");
+        waitForPageToLoadCompletely(30);
+        //Delete
+        delete();
+        System.out.println("END: deleteAgencyAdmin()");
     }
 }
