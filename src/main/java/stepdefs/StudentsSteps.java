@@ -82,6 +82,8 @@ public class StudentsSteps extends BaseClass {
         public void stepEditStudentNote() {
             editNewStudentNote();
         }
-
-
+        @Then("^End User deletes Note of Student$")
+        public void stepDeleteStudentNote() {
+            deleteNewStudentNote();
+        }
 }

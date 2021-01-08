@@ -203,4 +203,14 @@ public class StudentsPage extends BasePage {
         closeFormAndSave();
         System.out.println("END: editNewStudentNote()");
     }
+
+    //Delete Notes (PENDING FOR BUSINESS DECISION)
+    public static void deleteNewStudentNote() {
+        System.out.println("START: deleteNewStudentNote()");
+        //Click the Notes to delete
+        clickTableRowByText("AUTO");
+        //Delete and Confirm
+        deleteAndConfirm();
+        System.out.println("END: deleteNewStudentNote()");
+    }
 }
