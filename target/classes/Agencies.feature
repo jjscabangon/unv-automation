@@ -67,3 +67,24 @@ Feature: Agencies
     And End User adds a new Agency Administrator
     And End User adds Note to Agency Administrator
     Then End User edits Note of Agency Administrator
+
+#  PENDING FOR BUSINESS CONFIRMATION
+#  @regression
+  Scenario: End User deletes Note of Agency Administrator
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Agency
+    And End User adds a new Agency Administrator
+    And End User adds Note to Agency Administrator
+    Then End User deletes Note of Agency Administrator
+
+  @regression
+  Scenario: End User searches for Agency Administrator
+    Given End User logs in
+      | Username | Super    |
+      | Password | Test1234 |
+    When End User adds a new Agency
+    And End User adds a new Agency Administrator
+    Then End User searches for Agency Administrator
+

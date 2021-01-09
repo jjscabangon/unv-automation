@@ -169,4 +169,26 @@ public class AgenciesPage extends BasePage {
         delete();
         System.out.println("END: deleteNoteAgencyAdmin()");
     }
+
+    //Search for Agency Administrator
+    public static void searchAgencyAdmin() {
+        System.out.println("START: searchAgencyAdmin()");
+        //Click Search button
+        driver.findElement(btnAgencyAdminSearch).click();
+        waitForPageToLoadCompletely(30);
+        //Input Firstname
+        driver.findElement(txtAgencyAdminSearchFirstname).sendKeys("AUTO");
+        //Click Perform Search button
+        driver.findElement(btnAgencyAdminSearch).click();
+        waitForPageToLoadCompletely(30);
+        //Click Search button
+        driver.findElement(btnAgencyAdminSearch).click();
+        waitForPageToLoadCompletely(30);
+        //Input Lastname
+        driver.findElement(txtAgencyAdminSearchLastname).sendKeys("AUTO");
+        //Click Perform Search button
+        driver.findElement(btnAgencyAdminSearch).click();
+        waitForPageToLoadCompletely(30);
+        System.out.println("END: searchAgencyAdmin()");
+    }
 }

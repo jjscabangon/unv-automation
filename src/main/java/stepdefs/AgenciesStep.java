@@ -41,7 +41,7 @@ public class AgenciesStep extends BaseClass {
             deleteAgencyAdmin();
         }
 
-    //Add, edit, delete Notes of Agency Admnistrator
+    //Add, edit, delete Notes of Agency Administrator
         @Then("^End User adds Note to Agency Administrator$")
         public void stepAddNoteAgencyAdmin() throws Exception {
             addNoteAgencyAdmin();
@@ -53,5 +53,11 @@ public class AgenciesStep extends BaseClass {
         @Then("^End User deletes Note of Agency Administrator$")
         public void stepDeleteNoteAgencyAdmin() throws Exception {
             deleteNoteAgencyAdmin();
+        }
+
+    //Search for Agency Administrator
+        @Then("^End User searches for Agency Administrator$")
+        public void stepSearchAgencyAdmin() throws Exception {
+            searchAgencyAdmin();
         }
 }
