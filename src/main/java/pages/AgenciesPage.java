@@ -65,6 +65,19 @@ public class AgenciesPage extends BasePage {
         System.out.println("END: deleteAgency()");
     }
 
+    //Search Agency
+    public static void searchAgency() {
+        System.out.println("START: searchAgency()");
+        //Click Search button
+        driver.findElement(btnAgencySearch).click();
+        waitForPageToLoadCompletely(30);
+        //Input Name
+        driver.findElement(txtAgencySearchName).sendKeys("AUTO");
+        //Click Perform Search button
+        driver.findElement(btnAgencySearch).click();
+        System.out.println("END: searchAgency()");
+    }
+
     //Add Agency Administrator
     public static void addNewAgencyAdmin() {
         System.out.println("START: addNewAgencyAdmin()");

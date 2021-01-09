@@ -89,6 +89,9 @@ public class BasePage extends BaseClass {
         public static By txtAgencyCity = By.cssSelector("input#txtCity");
         public static By dddAgencyState = By.cssSelector("select#cboStateID");
         public static By txtAgencyZip = By.cssSelector("input#txtZip");
+        //Search Agency
+        public static By btnAgencySearch = By.cssSelector("input#cmdSearch");
+        public static By txtAgencySearchName = By.cssSelector("input#txtName");
         //Add, Edit, and Delete Agency Administrator
         public static By btnAgencyAdmin = By.cssSelector("input#cmdContacts");
         public static By btnAgencyAdminAddNewAdmin = By.cssSelector("input#cmdInsert");
