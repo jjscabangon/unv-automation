@@ -26,4 +26,10 @@ public class UniversitiesStep extends BaseClass {
         public void stepDeleteUniversity() throws Exception {
             deleteUniversity();
         }
+
+    //Search for University
+        @Then("^End User searches for University$")
+        public void stepSearchUniversity() throws Exception {
+            searchUniversity();
+        }
 }

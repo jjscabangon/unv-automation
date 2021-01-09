@@ -111,6 +111,11 @@ public class BasePage extends BaseClass {
 
     //Universities
     public static By btnHomeUniversities = By.cssSelector("input[id*='cmdBrowseAcademies']");
+        //Search for University
+        public static By btnUniversitiesSearch = By.cssSelector("input#cmdSearch");
+        public static By txtUniversitiesSearchName = By.cssSelector("input#txtName");
+        public static By ddUniversitiesSearchCountry = By.cssSelector("select#cboCountyID");
+        public static By ddUniversitiesSearchRegion = By.cssSelector("select#cboRegionID");
 
     //University Classes
     public static By btnHomeUniversityClasses = By.cssSelector("input[id*='cmdBrowseGroups']");
