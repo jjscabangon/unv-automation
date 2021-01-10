@@ -7,7 +7,7 @@ public class LoginPage extends BasePage {
     //Execute login
     public static void login(DataTable loginCredentials) {
         System.out.println("START: login()");
-        waitForPageToLoadCompletely(60);
+        waitForPageToLoadCompletely(3);
         //Convert DataTable into Array
         List<List<String>> loginRawData = loginCredentials.raw();
         ArrayList<String> loginDataList = new ArrayList<>();
@@ -22,7 +22,7 @@ public class LoginPage extends BasePage {
     //Verify successful login
     public static boolean isLoginSuccessful() throws InterruptedException{
         System.out.println("START: isLoginSuccessful()");
-        waitForPageToLoadCompletely(60);
+        waitForPageToLoadCompletely(10);
         try {
             if(driver.findElement(homeHeaderTable).isDisplayed()) {
                 System.out.println("ASSERT: isLoginSuccessful() | PASSED");

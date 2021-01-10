@@ -17,7 +17,6 @@ public class UniversitiesPage extends BasePage {
         System.out.println("START: editUniversity()");
         //Click Universities main menu
         clickMainMenu(btnHomeUniversities);
-        waitForPageToLoadCompletely(30);
         //Click row to edit
         clickTableRowByText("Test");
         String currentDateAndTime = getDateAndTimeNoFormat();
@@ -59,7 +58,6 @@ public class UniversitiesPage extends BasePage {
         System.out.println("START: deleteUniversity()");
         //Click Universities main menu
         clickMainMenu(btnHomeUniversities);
-        waitForPageToLoadCompletely(30);
         System.out.println("END: deleteUniversity()");
     }
 
@@ -68,7 +66,6 @@ public class UniversitiesPage extends BasePage {
         System.out.println("START: searchUniversity()");
         //Click Universities main menu
         clickMainMenu(btnHomeUniversities);
-        waitForPageToLoadCompletely(30);
         //Click Search button
         driver.findElement(btnUniversitiesSearch).click();
         waitForPageToLoadCompletely(30);

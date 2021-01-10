@@ -14,8 +14,14 @@ public class AdministratorsSteps extends BaseClass {
     }
 
     //Add, edit, delete an University Admin
-    @Then("^End User adds a new University Admin$")
-    public void stepAddNewUniversityAdmin() throws Exception {
-        addNewUniversityAdmin();
-    }
+        @Then("^End User adds a new University Admin$")
+        public void stepAddNewUniversityAdmin() throws Exception {
+            addNewUniversityAdmin();
+        }
+
+    //Search for University Admin
+        @Then("^End User searches for University Admin$")
+        public void stepSearchUniversityAdmin() throws Exception {
+            searchUniversityAdmin();
+        }
 }

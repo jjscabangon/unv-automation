@@ -130,6 +130,10 @@ public class BasePage extends BaseClass {
         //Administrators
         public static By btnUniversityAdministrator = By.cssSelector("input#cmdContacts");
         public static By btnUniversityAdminAddNew = By.cssSelector("input#cmdInsert");
+        public static By btnUniversityAdminSearch = By.cssSelector("input#cmdSearch");
+        public static By txtUniversityAdminSearchFirstname = By.cssSelector("input#txtFName");
+        public static By txtUniversityAdminSearchLastname = By.cssSelector("input#txtLName");
+        public static By ddUniversityAdminSearchType = By.cssSelector("select#cboUserTypeID");
         //Students
         public static By btnUniversityStudents = By.cssSelector("input#cmdUsers");
 
