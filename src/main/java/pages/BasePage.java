@@ -142,7 +142,10 @@ public class BasePage extends BaseClass {
 
     //Curriculum
     public static By btnHomeCurriculum = By.cssSelector("input[id*='cmdBrowseCurriculum']");
-    public static By btnCurriculumSearch = By.cssSelector("span.fa-search");
+        //Add, Edit, Delete Curriculum
+        public static By btnCurriculumExpand = By.cssSelector("input#imgExpandCurriculum");
+        //Search Curriculum
+        public static By btnCurriculumSearch = By.cssSelector("span.fa-search");
 
     //Item Headings
     public static By btnHomeItemHeadings = By.cssSelector("input[id*='cmdBrowseItemHeadings']");

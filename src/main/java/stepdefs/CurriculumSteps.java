@@ -12,8 +12,15 @@ public class CurriculumSteps extends BaseClass {
         driver.quit();
     }
 
-    @Then("^End user searches for Curriculum$")
-    public void stepSearchCurriculum() {
-        searchCurriculum();
-    }
+    //Search for Curriculum
+        @Then("^End user adds a new Curriculum$")
+        public void stepAddNewCurriculum() {
+            addNewCurriculum();
+        }
+
+    //Search for Curriculum
+        @Then("^End user searches for Curriculum$")
+        public void stepSearchCurriculum() {
+            searchCurriculum();
+        }
 }
