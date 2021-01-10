@@ -144,6 +144,15 @@ public class BasePage extends BaseClass {
     public static By btnHomeCurriculum = By.cssSelector("input[id*='cmdBrowseCurriculum']");
         //Add, Edit, Delete Curriculum
         public static By btnCurriculumExpand = By.cssSelector("input#imgExpandCurriculum");
+        public static By btnCurriculumAddNewCurriculum = By.cssSelector("input#cmdInsertCurriculum");
+        public static By txtAddCurriculumID = By.cssSelector("input#txtID");
+        public static By txtAddCurriculumDescription = By.cssSelector("input#txtDescription");
+        public static By txtAddCurriculumHours = By.cssSelector("input#ctl00_phBody_radRequiredHours");
+        public static By spnAddCurriculumHoursUp = By.cssSelector("a#ctl00_phBody_radRequiredHours_SpinUpButton");
+        public static By spnAddCurriculumHoursDown = By.cssSelector("a#ctl00_phBody_radRequiredHours_SpinDownButton");
+        public static By txtAddCurriculumCutoff = By.cssSelector("input#ctl00_phBody_radCutoffPercentage");
+        public static By spnAddCurriculumCutoffUp = By.cssSelector("a#ctl00_phBody_radCutoffPercentage_SpinUpButton");
+        public static By spnAddCurriculumCutoffDown = By.cssSelector("a#ctl00_phBody_radCutoffPercentage_SpinDownButton");
         //Search Curriculum
         public static By btnCurriculumSearch = By.cssSelector("span.fa-search");
 
