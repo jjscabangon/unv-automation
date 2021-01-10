@@ -129,6 +129,8 @@ public class BasePage extends BaseClass {
         public static By ddAddUniversityType = By.cssSelector("select#cboTypeID");
         //Administrators
         public static By btnUniversityAdministrator = By.cssSelector("input#cmdContacts");
+        public static By btnUniversityAdminAddNew = By.cssSelector("input#cmdInsert");
+        //Students
         public static By btnUniversityStudents = By.cssSelector("input#cmdUsers");
 
     //University Classes
