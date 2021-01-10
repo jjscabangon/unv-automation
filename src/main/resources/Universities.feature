@@ -8,7 +8,7 @@ Feature: Universities
       | Password | Test1234 |
     Then End User adds a new University
 
-#  PENDING FOR BUSINESS CONFIRMATION
+#  [UNV-59] [Bug] [Universities] Change University - Region and Type dropdowns do not have selections
 #  @regression
   Scenario: End User edits a University
     Given End User logs in

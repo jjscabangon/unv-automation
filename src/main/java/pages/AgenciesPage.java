@@ -108,7 +108,6 @@ public class AgenciesPage extends BasePage {
         System.out.println("START: editAgencyAdmin()");
         //Click row to Add Administrator
         clickTableRowByText("AUTO");
-        waitForPageToLoadCompletely(30);
         String currentDateAndTime = getDateAndTimeNoFormat();
         //Input First Name
         driver.findElement(txtAgencyAdminFirstname).clear();

@@ -18,6 +18,38 @@ public class UniversitiesPage extends BasePage {
         //Click Universities main menu
         clickMainMenu(btnHomeUniversities);
         waitForPageToLoadCompletely(30);
+        //Click row to edit
+        clickTableRowByText("Test");
+        String currentDateAndTime = getDateAndTimeNoFormat();
+        //Input ID
+        driver.findElement(txtAddUniversityID).clear();
+        driver.findElement(txtAddUniversityID).sendKeys(currentDateAndTime);
+//        //Input Name
+//        driver.findElement(txtAddUniversityName).clear();
+//        driver.findElement(txtAddUniversityName).sendKeys("EDIT AUTO University " + currentDateAndTime);
+        //Input Address 2
+        driver.findElement(txtAddUniversityAddress1).clear();
+        driver.findElement(txtAddUniversityAddress1).sendKeys("EDIT AUTO Address 1 " + currentDateAndTime);
+        //Input Address 2
+        driver.findElement(txtAddUniversityAddress2).clear();
+        driver.findElement(txtAddUniversityAddress2).sendKeys("EDIT AUTO Address 2" + currentDateAndTime);
+        //Input City
+        driver.findElement(txtAddUniversityCity).clear();
+        driver.findElement(txtAddUniversityCity).sendKeys("EDIT City");
+        //Select State
+        selectDropdown(ddAddUniversityState,"Colorado");
+        //Input Zip
+        driver.findElement(txtAddUniversityZip).clear();
+        driver.findElement(txtAddUniversityZip).sendKeys("EDIT ZIP");
+        //Select Country
+        selectDropdown(ddAddUniversityCountry,"Jefferson");
+//        [UNV-59] [Bug] [Universities] Change University - Region and Type dropdowns do not have selections
+//        //Select Region
+//        selectDropdown(ddAddUniversityRegion, "MISSING");
+//        //Select Type
+//        selectDropdown(ddAddUniversityType,"MISSING");
+        //Close Form and Save
+        closeFormAndSave();
         System.out.println("END: editUniversity()");
     }
 

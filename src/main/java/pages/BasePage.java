@@ -116,6 +116,20 @@ public class BasePage extends BaseClass {
         public static By txtUniversitiesSearchName = By.cssSelector("input#txtName");
         public static By ddUniversitiesSearchCountry = By.cssSelector("select#cboCountyID");
         public static By ddUniversitiesSearchRegion = By.cssSelector("select#cboRegionID");
+        //Add, Edit, Delete University
+        public static By txtAddUniversityID = By.cssSelector("input#txtID");
+        public static By txtAddUniversityName = By.cssSelector("input#txtName");
+        public static By txtAddUniversityAddress1 = By.cssSelector("input#txtAddress1");
+        public static By txtAddUniversityAddress2 = By.cssSelector("input#txtAddress2");
+        public static By txtAddUniversityCity = By.cssSelector("input#txtCity");
+        public static By ddAddUniversityState = By.cssSelector("select#cboStateID");
+        public static By txtAddUniversityZip = By.cssSelector("input#txtZip");
+        public static By ddAddUniversityCountry = By.cssSelector("select#cboCountyID");
+        public static By ddAddUniversityRegion = By.cssSelector("select#cboRegionID");
+        public static By ddAddUniversityType = By.cssSelector("select#cboTypeID");
+        //Administrators
+        public static By btnUniversityAdministrator = By.cssSelector("input#cmdContacts");
+        public static By btnUniversityStudents = By.cssSelector("input#cmdUsers");
 
     //University Classes
     public static By btnHomeUniversityClasses = By.cssSelector("input[id*='cmdBrowseGroups']");
