@@ -18,6 +18,7 @@ public class BasePage extends BaseClass {
         public static By btnConfirmDelete = By.cssSelector("button#confirmationRevertYes");
         //Click Table Row
         public static By tblTable = By.cssSelector("table.ListTable");
+        public static By tblCurriculumTable = By.cssSelector("table.ListTableAnyHeight");
 
     //Login Page
     public static By loginUsername = By.cssSelector("input#txtLoginID");

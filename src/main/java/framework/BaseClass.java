@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import static pages.BasePage.*;
 
@@ -129,5 +130,17 @@ public class BaseClass {
         WebElement row = table.findElement(By.xpath("//tr/td[contains(text(), '" + text + "')]"));
         row.click();
         waitForPageToLoadCompletely(30);
+    }
+
+    //WIP: Looking for a way to select the correct Add and Edit buttons
+    public static void clickCurriculumToEdit(String sibling) {
+        WebElement table = driver.findElement(tblCurriculumTable);
+        List<WebElement> elements = table.findElements(By.xpath("//tr/td[contains(text(), '" + sibling + "')]"));
+        for (WebElement element : elements) {
+            System.out.println((element.getTagName().toString()));
+            if ((element.getTagName().toString()).contains("nobr")) {
+
+            }
+        }
     }
 }

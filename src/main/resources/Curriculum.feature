@@ -13,8 +13,9 @@ Feature: Curriculum
       | Username | Super    |
       | Password | Test1234 |
     And End user adds a new Curriculum
-#    Then End user edits a Curriculum
+    Then End user edits a Curriculum
 
+  #WIP
   @regression
   Scenario: End User searches for a Curriculum
     Given End User logs in

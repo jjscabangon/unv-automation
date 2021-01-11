@@ -17,6 +17,10 @@ public class CurriculumSteps extends BaseClass {
         public void stepAddNewCurriculum() {
             addNewCurriculum();
         }
+        @Then("^End user edits a Curriculum$")
+        public void stepEditCurriculum() {
+            editCurriculum();
+        }
 
     //Search for Curriculum
         @Then("^End user searches for Curriculum$")
